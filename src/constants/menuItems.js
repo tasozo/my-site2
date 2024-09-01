@@ -1,6 +1,6 @@
-const menuItems = [
-  { text: 'Home', url: '/' },
-  { text: 'About', url: '/about' },
-  { text: 'Work', url: '/work' },
-  { text: 'Contact', url: '/contact' },
+export const MENU_ITEMS = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' },
+  { name: 'Work', url: '/work' },
+  { name: 'Contact', url: '/contact' },
 ]
