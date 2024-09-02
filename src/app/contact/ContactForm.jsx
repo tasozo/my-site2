@@ -60,7 +60,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>氏名</FormLabel>
               <FormControl>
-                <Input placeholder='適当な名前を入力してください。' {...field} />
+                <Input placeholder='適当な名前を入力してください。ああ' {...field} />
               </FormControl>
               <FormDescription>ここが名前入力エリアです。</FormDescription>
               <FormMessage />
