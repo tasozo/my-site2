@@ -1,9 +1,11 @@
+
 import { FaArrowLeft } from 'react-icons/fa6'
 import { Button } from '../button'
 import Link from 'next/link'
 import { MENU_ITEMS } from '../../../constants/menuItems'
 
-export default function MenuDrawer({}) {
+// MenuDrawerのProps追加
+export default function MenuDrawer({ isMenuOpen, setIsMenuOpen }) {
   return (
     <div
       className={`
@@ -11,22 +13,34 @@ export default function MenuDrawer({}) {
         top-0
         h-screen w-80
         bg-pink-300
-          `}
+        ${isMenuOpen ? 'left-0' : '-left-80'}
+        `
+        // 上の１行追加
+        }
     >
-      <Button aria-label='close' role='button'>
+      <Button
+        aria-label='close'
+        role='button'
+        /* ↓　ここから　↓ */
+        onClick={() => setIsMenuOpen(false)}
+        variant='default'
+        className='m-4 size-12'
+        /* ↑　ここまで追加　↑ */
+      >
         <FaArrowLeft />
       </Button>
       <nav
-      className={`
-        flex flex-col gap-4
-        p-4
-      `}
-      
+        /* ↓　ここから　↓ */
+        className={`
+          flex flex-col gap-4
+          p-4
+        `}
+        /* ↑　ここまで追加　↑ */
       >
-        
-
         {MENU_ITEMS.map((item, index) => (
-          <Link key={index} href={item.url}>
+
+          // ↓のonClick部分を追加
+          <Link key={index} href={item.url} onClick={() => setIsMenuOpen(false)}>
             {item.name}
           </Link>
         ))}
@@ -34,4 +48,3 @@ export default function MenuDrawer({}) {
     </div>
   )
 }
-
