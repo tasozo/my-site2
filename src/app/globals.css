@@ -30,7 +30,7 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 270 100% 50%;
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -88,4 +88,16 @@
   h2{
     @apply text-primary text-3xl text-center font-bold
   }
+}
+
+
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #89c7de;
+  text-align: center;
+  padding: 30px 0;
 }

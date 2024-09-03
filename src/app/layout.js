@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import CustomHeader from '@/components/common/CustomHeader'
-
+import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,6 +16,20 @@ export default function RootLayout({ children }) {
         <CustomHeader />
         {/*mainタグを追加*/}
         <main className='container flex flex-col mx-auto px-4 py-8'>{children}</main>
+        
+
+        <footer>
+        <div>
+        <p>アイコンのライセンス</p>
+        <br />
+        <p>このサイトで使用しているアイコンは、「Font Awesome」のFreeプランを利用しています。</p>
+        <p>Font Awesomeのライセンスについては、以下のリンクを参照してください。</p>
+        <br />
+        <Link href='https://fontawesome.com/license/free' className='text-blue-500'>
+          Font Awesome Free License
+        </Link>
+      </div>
+      </footer>
       </body>
     </html>
   )

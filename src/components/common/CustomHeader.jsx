@@ -1,4 +1,3 @@
-'use client'
 // ▼１行追加
 'use client'
 
