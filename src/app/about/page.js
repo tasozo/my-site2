@@ -1,7 +1,9 @@
 export default function Page() {
   return (
     <>
-      <h2>about</h2>
+
+     background: linear-gradient(220.55deg, #B7DCFF 0%, #FFA4F6 100%); 
+     <h1>about</h1>
     </>
   );
 }

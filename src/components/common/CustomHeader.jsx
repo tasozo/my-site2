@@ -48,7 +48,7 @@ export default function CustomHeader() {
           <FaBars />
         </Button>
 
-        <h1 className='text-2xl hidden md:block'>My-site</h1>
+        <h1 className='text-2xl hidden md:block'>TASO</h1>
         <nav
           className={`
             hidden md:flex gap-4
